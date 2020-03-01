@@ -20,5 +20,5 @@
 1. Quiz scores
 2. Participant survey results
 
-* The data will be compared using a between group design (VR and 2D)
+* A two-sample t-test will be used to compare the results of the two groups to find a possible statistical significance
 * We will use this data to determine which of the two digital mediums creates the most effective learning experience.
