@@ -10,13 +10,15 @@ public class GameManager : MonoBehaviour {
     public Question[] questions;
     private static List<Question> unansweredQuestions;
     private Question currentQuestion;
+    private int currentCorrectAnswer;
 
     public TextMeshProUGUI questionText;
     public Image questionImage;
-    public TextMeshProUGUI answerOneText;
-    public TextMeshProUGUI answerTwoText;
-    public TextMeshProUGUI answerThreeText;
-    public TextMeshProUGUI answerFourText;
+
+    public TextMeshProUGUI answerTriangleText;
+    public TextMeshProUGUI answerDiamondText;
+    public TextMeshProUGUI answerCircleText;
+    public TextMeshProUGUI answerSquareText;
 
     void Start() {
         if (unansweredQuestions == null || unansweredQuestions.Count == 0) {
@@ -28,6 +30,7 @@ public class GameManager : MonoBehaviour {
     void GetRandomQuestion() {
         int randomQuestionIndex = Random.Range(0, unansweredQuestions.Count);
         currentQuestion = unansweredQuestions[randomQuestionIndex];
+        currentCorrectAnswer = currentQuestion.correctAnswer;
         unansweredQuestions.RemoveAt(randomQuestionIndex);
 
         if (currentQuestion.question.Length == 0) {
@@ -37,10 +40,20 @@ public class GameManager : MonoBehaviour {
             questionText.text = currentQuestion.question;
         }
 
-        answerOneText.text = currentQuestion.answerOne;
-        answerTwoText.text = currentQuestion.answerTwo;
-        answerThreeText.text = currentQuestion.answerThree;
-        answerFourText.text = currentQuestion.answerFour;
+        answerTriangleText.text = currentQuestion.answerTriangle;
+        answerDiamondText.text = currentQuestion.answerDiamond;
+        answerCircleText.text = currentQuestion.answerCircle;
+        answerSquareText.text = currentQuestion.answerSquare;
+    }
+
+    void UserSelectAnswer(int answerIndex) {
+        if (currentCorrectAnswer == answerIndex) Debug.Log("CORRECT");
+        else {
+            if (answerIndex == 0) answerTriangleText.enabled = false;
+            else if (answerIndex == 1) answerDiamondText.enabled = false;
+            else if (answerIndex == 2) answerCircleText.enabled = false;
+            else answerSquareText.enabled = false;
+        }
     }
 
 }
