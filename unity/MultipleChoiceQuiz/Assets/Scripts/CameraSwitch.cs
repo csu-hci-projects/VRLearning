@@ -5,11 +5,16 @@ using UnityEngine;
 public class CameraSwitch : MonoBehaviour {
 
     public GameObject[] cameras;
-    public Canvas QuizUI;
-    private bool canPress = true;
+    public CanvasGroup Quiz;
+    public CanvasGroup Answer; 
+    private static bool canPress = true;
 
     void Start() {
-        QuizUI.enabled = false;
+        if (canPress == true) {
+            Quiz.alpha = 0;
+            Quiz.interactable = false;
+        }
+        Answer.alpha = 0;
     }
 
     void Update(){
@@ -33,7 +38,8 @@ public class CameraSwitch : MonoBehaviour {
         currentCamera = currentCamera + change;
 
         if (currentCamera == cameras.Length) {
-            QuizUI.enabled = true;
+            Quiz.alpha = 1;
+            Quiz.interactable = true;
             canPress = false;
         }
         if (currentCamera > cameras.Length - 1) {
