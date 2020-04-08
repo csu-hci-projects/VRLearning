@@ -3,7 +3,7 @@
 1. Lesson Medium - we will have a **VR** lesson and a **traditional 2D** application lesson
 
 **Dependent:**
-1. Information Retention - how well participants remember the presented infomrmation
+1. Information Retention - how well participants remember the presented information
 <hr>
 
 ### Participants
