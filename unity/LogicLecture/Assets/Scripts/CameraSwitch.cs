@@ -5,6 +5,7 @@ using UnityEngine;
 public class CameraSwitch : MonoBehaviour {
 
     public GameObject[] cameras;
+    private int index = 0;
 
     void Update(){
         checkForKeyPress();
@@ -20,23 +21,19 @@ public class CameraSwitch : MonoBehaviour {
     }
 
     void changeCamera(int change){
-        int currentCamera = PlayerPrefs.GetInt("CameraPosition");
 
-        int lastCamera = currentCamera;
+        int lastIndex = index;
+        index = index + change;
 
-        currentCamera = currentCamera + change;
-
-        if (currentCamera > cameras.Length-1){
-            currentCamera = 0;
+        if (index > cameras.Length-1){
+            index = 0;
         }
-        if (currentCamera < 0){
-            currentCamera = cameras.Length-1;
+        if (index < 0){
+            index = cameras.Length-1;
         }
 
-        PlayerPrefs.SetInt("CameraPosition", currentCamera);
-
-        cameras[lastCamera].SetActive(false);
-        cameras[currentCamera].SetActive(true);
+        cameras[lastIndex].SetActive(false);
+        cameras[index].SetActive(true);
 
     }
 }

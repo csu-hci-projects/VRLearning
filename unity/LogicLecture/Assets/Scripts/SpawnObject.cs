@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SpawnObject : MonoBehaviour {
 
-    public GameObject meteor;
+    public GameObject thisObject;
 
     public void OnMouseDown(){
         spawnObject();
@@ -12,7 +12,7 @@ public class SpawnObject : MonoBehaviour {
 
     void spawnObject(){
         Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        Instantiate(meteor, mousePosition, Quaternion.identity);
+        Instantiate(thisObject, mousePosition, Quaternion.identity);
     }
 
     void Update(){
