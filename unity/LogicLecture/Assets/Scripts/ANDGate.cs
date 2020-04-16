@@ -21,15 +21,18 @@ public class ANDGate : MonoBehaviour {
         Vector2 pos = new Vector2(transform.position.x-2, transform.position.y+0.5f);
         inputOne = Instantiate(nodeObject, pos, Quaternion.identity);
         inputOne.transform.parent = transform;
+        inputOne.tag = "InputNode";
 
         pos = new Vector2(transform.position.x-2, transform.position.y-0.5f);
         inputTwo = Instantiate(nodeObject, pos, Quaternion.identity);
         inputTwo.transform.parent = transform;
+        inputTwo.tag = "InputNode";
 
         //spawn output node
         pos = new Vector2(transform.position.x+2, transform.position.y);
         output = Instantiate(nodeObject, pos, Quaternion.identity);
         output.transform.parent = transform;
+        output.tag = "OutputNode";
 
         nodeScripts = GetComponentsInChildren<GateNode>();
 
@@ -49,19 +52,19 @@ public class ANDGate : MonoBehaviour {
         }
 
         if (inputOneStatus){
-            inputOne.GetComponent<Renderer>().material.color = new Color(1.0f, 1.0f, 0.0f);
+            inputOne.GetComponent<Renderer>().material.color = new Color(5.0f, 5.0f, 0.0f);
         } else {
             inputOne.GetComponent<Renderer>().material.color = new Color(0.0f, 0.0f, 1.0f);
         }
 
         if (inputTwoStatus){
-            inputTwo.GetComponent<Renderer>().material.color = new Color(1.0f, 1.0f, 0.0f);
+            inputTwo.GetComponent<Renderer>().material.color = new Color(5.0f, 5.0f, 0.0f);
         } else {
             inputTwo.GetComponent<Renderer>().material.color = new Color(0.0f, 0.0f, 1.0f);
         }
 
         if (outputStatus){
-            output.GetComponent<Renderer>().material.color = new Color(1.0f, 1.0f, 0.0f);
+            output.GetComponent<Renderer>().material.color = new Color(5.0f, 5.0f, 0.0f);
         } else {
             output.GetComponent<Renderer>().material.color = new Color(0.0f, 0.0f, 1.0f);
         }
