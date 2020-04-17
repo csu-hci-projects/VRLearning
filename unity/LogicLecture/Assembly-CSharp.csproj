@@ -57,6 +57,7 @@
      <Compile Include="Assets\Scripts\CameraSwitch.cs" />
      <Compile Include="Assets\Scripts\DragObject.cs" />
      <Compile Include="Assets\Scripts\GateNode.cs" />
+     <Compile Include="Assets\Scripts\NOTGate.cs" />
      <Compile Include="Assets\Scripts\ORGate.cs" />
      <Compile Include="Assets\Scripts\SpawnObject.cs" />
  <Reference Include="Unity.TextMeshPro.Editor">
