@@ -60,6 +60,7 @@
      <Compile Include="Assets\Scripts\NOTGate.cs" />
      <Compile Include="Assets\Scripts\ORGate.cs" />
      <Compile Include="Assets\Scripts\SpawnObject.cs" />
+     <Compile Include="Assets\Scripts\XORGate.cs" />
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>C:/Users/root/Documents/GitHub/VRLearning/unity/LogicLecture/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
