@@ -2224,34 +2224,42 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questions:
-  - question: Question 1
+  - question: 'Simplification of the Boolean expression (A + B)''(C + D + E)'' + (A
+      + B)'' yields which of the following results? '
+    correctAnswer: 3
+    spriteQuestion: {fileID: 0}
+    answerTriangle: C + D + E
+    answerDiamond: A'B'C'D'E'
+    answerCircle: A + B
+    answerSquare: A'B'
+  - question: An equivalent representation for the Boolean expression A' + 1 is
     correctAnswer: 0
     spriteQuestion: {fileID: 0}
     answerTriangle: 1
-    answerDiamond: 2
-    answerCircle: 3
-    answerSquare: 4
-  - question: Question 2
+    answerDiamond: A
+    answerCircle: A'
+    answerSquare: 0
+  - question: 
+    correctAnswer: 2
+    spriteQuestion: {fileID: 21300000, guid: a58fe3eca6ca4463d800e73bc73da607, type: 3}
+    answerTriangle: a = T, b = T, c = T
+    answerDiamond: a = T, b = F, c = T
+    answerCircle: a = T, b = F, c = F
+    answerSquare: a = F, b = F, c = F
+  - question: Which of the following are De-Morgan's law?
     correctAnswer: 1
     spriteQuestion: {fileID: 0}
-    answerTriangle: 1
-    answerDiamond: 2
-    answerCircle: 3
-    answerSquare: 4
-  - question: Quesstion 3
-    correctAnswer: 2
+    answerTriangle: "P AND (Q OR R) \u039E ( P AND Q ) v ( P AND R )"
+    answerDiamond: "~(P AND R) \u039E ~P OR ~R , ~(P OR R) \u039E ~P ^ ~R"
+    answerCircle: "P OR ~P \u039E True , P AND ~P \u039E False"
+    answerSquare: None of the above
+  - question: The compound statement A OR ~(A AND B) is always
+    correctAnswer: 1
     spriteQuestion: {fileID: 0}
-    answerTriangle: 1
-    answerDiamond: 2
-    answerCircle: 3
-    answerSquare: 4
-  - question: Question 4
-    correctAnswer: 3
-    spriteQuestion: {fileID: 0}
-    answerTriangle: 1
-    answerDiamond: 2
-    answerCircle: 3
-    answerSquare: 4
+    answerTriangle: False
+    answerDiamond: True
+    answerCircle: 0
+    answerSquare: 0.5
   questionText: {fileID: 1630065348}
   questionImage: {fileID: 404374643}
   answerTriangleText: {fileID: 827448554}
@@ -3100,12 +3108,12 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 72
+  m_fontSize: 50
   m_fontSizeBase: 50
   m_fontWeight: 400
   m_enableAutoSizing: 1
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_fontSizeMin: 20
+  m_fontSizeMax: 50
   m_fontStyle: 0
   m_textAlignment: 514
   m_characterSpacing: 0
