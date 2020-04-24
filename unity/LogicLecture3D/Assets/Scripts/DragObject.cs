@@ -8,7 +8,9 @@ using Valve.VR.Extras;
 
 public class DragObject : MonoBehaviour {
 
-    private bool dragging;
+    public bool draggable = false;
+    public bool dragging = false;
+    public Vector3 raycastPoint;
 
     public void OnMouseDown(){
         dragging = true;
@@ -19,9 +21,16 @@ public class DragObject : MonoBehaviour {
     }
 
     void Update(){
-        if (dragging) {
-            Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
-            transform.Translate(mousePosition);
+        if (draggable && dragging) {
+            transform.position = new Vector3(raycastPoint.x, raycastPoint.y, 0.05f);
+        }
+        if (SteamVR_Actions.default_GrabPinch.GetStateDown(SteamVR_Input_Sources.Any))
+        {
+            dragging = true;
+        }
+        if (SteamVR_Actions.default_GrabPinch.GetStateUp(SteamVR_Input_Sources.Any))
+        {
+            dragging = false;
         }
     }
 }

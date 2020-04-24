@@ -106,6 +106,8 @@ namespace Valve.VR.Extras
             if (previousContact && previousContact != hit.transform)
             {
                 PointerEventArgs args = new PointerEventArgs();
+                //args.raycast = raycast;
+                args.hit = hit;
                 args.fromInputSource = pose.inputSource;
                 args.distance = 0f;
                 args.flags = 0;
@@ -115,13 +117,6 @@ namespace Valve.VR.Extras
             }
             if (bHit && previousContact != hit.transform)
             {
-                PointerEventArgs argsIn = new PointerEventArgs();
-                argsIn.fromInputSource = pose.inputSource;
-                argsIn.distance = hit.distance;
-                argsIn.flags = 0;
-                argsIn.target = hit.transform;
-                OnPointerIn(argsIn);
-                previousContact = hit.transform;
             }
             if (!bHit)
             {
@@ -135,6 +130,8 @@ namespace Valve.VR.Extras
             if (bHit && interactWithUI.GetStateUp(pose.inputSource))
             {
                 PointerEventArgs argsClick = new PointerEventArgs();
+                //argsClick.raycast = raycast;
+                argsClick.hit = hit;
                 argsClick.fromInputSource = pose.inputSource;
                 argsClick.distance = hit.distance;
                 argsClick.flags = 0;
@@ -153,6 +150,18 @@ namespace Valve.VR.Extras
                 pointer.GetComponent<MeshRenderer>().material.color = color;
             }
             pointer.transform.localPosition = new Vector3(0f, 0f, dist / 2f);
+            if (hit.point.x != 0.0 && hit.point.y != 0.0 && hit.point.z != 0.0)
+            {
+                PointerEventArgs argsIn = new PointerEventArgs();
+                //argsIn.raycast = raycast;
+                argsIn.hit = hit;
+                argsIn.fromInputSource = pose.inputSource;
+                argsIn.distance = hit.distance;
+                argsIn.flags = 0;
+                argsIn.target = hit.transform;
+                OnPointerIn(argsIn);
+                previousContact = hit.transform;
+            }
         }
     }
 
@@ -162,6 +171,8 @@ namespace Valve.VR.Extras
         public uint flags;
         public float distance;
         public Transform target;
+        public RaycastHit hit;
+        //public Ray raycast;
     }
 
     public delegate void PointerEventHandler(object sender, PointerEventArgs e);
