@@ -13,8 +13,7 @@ public class CameraSwitch : MonoBehaviour
     private int index = 0;
 
     void Update()
-    {
-        
+    { 
         if (SteamVR_Actions.default_SlideRight.GetStateDown(SteamVR_Input_Sources.Any))
         {
             updateCameraPosition(1);

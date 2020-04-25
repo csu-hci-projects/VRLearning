@@ -18,6 +18,10 @@ public class PointerController : SteamVR_LaserPointer
         {
             e.target.GetComponent<SpawnObject>().spawnPoint = new Vector3(e.target.position.x, 0.2f, 0.05f);
         }
+        if (e.target.gameObject.tag == "InputNode" || e.target.gameObject.tag == "OutputNode")
+        {
+            e.target.GetComponent<GateNode>().e = e;
+        }
     }
     public override void OnPointerOut(PointerEventArgs e)
     {
@@ -29,6 +33,10 @@ public class PointerController : SteamVR_LaserPointer
         if (e.target.gameObject.tag == "Spawner")
         {
             e.target.GetComponent<SpawnObject>().spawnPoint = Vector3.zero;
+        }
+        if (e.target.gameObject.tag == "InputNode" || e.target.gameObject.tag == "OutputNode")
+        {
+            e.target.GetComponent<GateNode>().e = default(PointerEventArgs);
         }
     }
 }

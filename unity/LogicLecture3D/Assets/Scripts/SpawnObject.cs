@@ -10,13 +10,8 @@ public class SpawnObject : MonoBehaviour {
     public SteamVR_LaserPointer laserPointer;
     public Vector3 spawnPoint = Vector3.zero;
 
-    public void OnMouseDown(){
-        // spawnObject();
-    }
-
     void spawnObject()
     {
-        Debug.Log("Spawn Object");
         Instantiate(thisObject, new Vector3(spawnPoint.x, 0.2f, 0.05f), Quaternion.identity);
     }
 

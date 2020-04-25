@@ -154,6 +154,7 @@ namespace Valve.VR.Extras
             {
                 PointerEventArgs argsIn = new PointerEventArgs();
                 //argsIn.raycast = raycast;
+                argsIn.bHit = bHit;
                 argsIn.hit = hit;
                 argsIn.fromInputSource = pose.inputSource;
                 argsIn.distance = hit.distance;
@@ -172,6 +173,7 @@ namespace Valve.VR.Extras
         public float distance;
         public Transform target;
         public RaycastHit hit;
+        public bool bHit;
         //public Ray raycast;
     }
 

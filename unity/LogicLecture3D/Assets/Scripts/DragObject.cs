@@ -12,14 +12,6 @@ public class DragObject : MonoBehaviour {
     public bool dragging = false;
     public Vector3 raycastPoint;
 
-    public void OnMouseDown(){
-        dragging = true;
-    }
-
-    public void OnMouseUp(){
-        dragging = false;
-    }
-
     void Update(){
         if (draggable && dragging) {
             transform.position = new Vector3(raycastPoint.x, raycastPoint.y, 0.05f);
