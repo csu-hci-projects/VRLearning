@@ -6,8 +6,9 @@ public class CameraSwitch : MonoBehaviour {
 
     public GameObject[] cameras;
     public CanvasGroup Quiz;
-    public CanvasGroup Answer; 
+    public CanvasGroup Answer;
     private static bool canPress = true;
+    private int index = 0;
 
     void Start() {
         if (canPress == true) {
@@ -22,37 +23,34 @@ public class CameraSwitch : MonoBehaviour {
     }
 
     void checkForKeyPress(){
-        if (Input.GetKeyDown(KeyCode.RightArrow) && canPress){
+        if (Input.GetKeyDown(KeyCode.RightArrow)){
             changeCamera(1);
         }
-        if (Input.GetKeyDown(KeyCode.LeftArrow) && canPress){
+        if (Input.GetKeyDown(KeyCode.LeftArrow)){
             changeCamera(-1);
         }
     }
 
     void changeCamera(int change){
-        int currentCamera = PlayerPrefs.GetInt("CameraPosition");
 
-        int lastCamera = currentCamera;
+        int lastIndex = index;
+        index = index + change;
 
-        currentCamera = currentCamera + change;
-
-        if (currentCamera == cameras.Length) {
+        if (index == cameras.Length) {
             Quiz.alpha = 1;
             Quiz.interactable = true;
             canPress = false;
         }
-        if (currentCamera > cameras.Length - 1) {
-            currentCamera = 0;
+
+        if (index > cameras.Length-1){
+            index = 0;
         }
-        if (currentCamera < 0) {
-            currentCamera = cameras.Length - 1;
+        if (index < 0){
+            index = cameras.Length-1;
         }
 
-        PlayerPrefs.SetInt("CameraPosition", currentCamera);
-
-        cameras[lastCamera].SetActive(false);
-        cameras[currentCamera].SetActive(true);
+        cameras[lastIndex].SetActive(false);
+        cameras[index].SetActive(true);
 
     }
 }
