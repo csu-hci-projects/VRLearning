@@ -17,5 +17,6 @@
 ### Other Resources
 https://doi.org/10.25304/rlt.v26.2140 - Learning in virtual reality: Effects on performance, emotion and engagement 
 https://www.sciencedirect.com/science/article/pii/S0360131519303276 - A systematic review of immersive virtual reality applications for higher education: Design elements, lessons learned, and research agenda
+https://eric.ed.gov/?id=EJ1165633 - A Systematic Review of Virtual Reality in Education
 
 
