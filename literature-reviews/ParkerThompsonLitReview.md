@@ -12,3 +12,11 @@
 	
 +	We can use the information in the article as an example of how virtual learning has been implemented in a college environment. We eventually hope to develop a virtual learning experience focused on computer science principles. Although computer science and biology are very different fields, we can still learn from how Google and Labster have implemented their labs as we develop ours. Through this, we can create a more engaging and immersive learning experience for remote students taking computer science courses. It seems that VR is best suited for learning visual or tangible things. In Google and Labster's case, they are teaching about chemistry experiments which are very hands on. Data structures, algorithms, logic chips/gates, and computer architectures may be things which could be visualized and adapted to a VR lesson effectively. For example, students could be asked to watch how a sorting algorith functions on an input, and then have to perform the algorithm themselves using virtual props.
 	
+
+
+### Other Resources
+https://doi.org/10.25304/rlt.v26.2140 - Learning in virtual reality: Effects on performance, emotion and engagement 
+https://www.sciencedirect.com/science/article/pii/S0360131519303276 - A systematic review of immersive virtual reality applications for higher education: Design elements, lessons learned, and research agenda
+https://eric.ed.gov/?id=EJ1165633 - A Systematic Review of Virtual Reality in Education
+
+

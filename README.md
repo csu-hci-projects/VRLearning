@@ -11,3 +11,6 @@
 ## Checkpoint 3:
 [Checkpoint 3 video](https://youtu.be/GA40gNV2wm4)
 > We have also updated our original proposal for changes due to COVID-19
+
+## Checkpoint 4:
+[Checkpoint 4 video](https://youtu.be/_R1acv1n-L0)
