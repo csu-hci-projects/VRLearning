@@ -14,3 +14,13 @@
 
 ## Checkpoint 4:
 [Checkpoint 4 video](https://youtu.be/_R1acv1n-L0)
+
+## Checkpoint 5:
+[Checkpoint 4 video](https://youtu.be/5o0HkfBPjWc)
+
+## Final Project Video:
+[Final Project Video](https://youtu.be/2vWqeK1g940)
+
+## Unity Lecture Links:
+[2D Lecture](https://github.com/csu-hci-projects/VRLearning/tree/master/unity/MultipleChoiceQuiz)
+[3D VR Lecture](https://github.com/csu-hci-projects/VRLearning/tree/master/unity/LogicLecture3D)
